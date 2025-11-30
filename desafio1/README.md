@@ -32,6 +32,7 @@ desafio1/
 │   ├── Dockerfile       # Definição da imagem do servidor (Nginx)
 │   └── Mensagem.html    # Página HTML da mensagem
 └── README.md            # Documentação do desafio
+└── Prints_Saida.png     # Imagem do log de saida
  Instruções de Execução
 Siga os passos abaixo para executar o projeto.
 
