@@ -17,7 +17,7 @@ O sistema é composto por dois serviços distintos que se comunicam via API REST
     * **Lógica:** Ao receber um acesso, ele faz uma requisição HTTP (`GET`) para o Serviço A, processa o JSON recebido e renderiza uma página HTML formatada.
     * **Comunicação:** Acessa o Serviço A pelo nome de host `servico-a` (resolução de DNS interna do Docker).
 
-## 📂 Estrutura de Arquivos
+## Estrutura de Arquivos
 
 ```text
 desafio4/
