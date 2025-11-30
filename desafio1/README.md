@@ -21,7 +21,7 @@ A solução é composta por três componentes principais:
     * **Lógica:** Executa um script Shell (`loop.sh`) que faz um loop infinito.
     * **Ação:** A cada 5 segundos, envia uma requisição HTTP (`curl`) para `http://container-servidor:8080` e imprime a resposta no terminal.
 
-## 📂 Estrutura de Arquivos
+## Estrutura de Arquivos
 
 ```text
 desafio1/
@@ -81,4 +81,8 @@ Parar e Limpar
 Para encerrar os testes e remover os containers:
 
 docker rm -f container-servidor container-cliente
+
+```
+## Saida esperada
+![Logs Funcionando](Prints_Saida.png)
 
