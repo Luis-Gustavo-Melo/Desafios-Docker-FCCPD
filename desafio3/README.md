@@ -1,16 +1,16 @@
 # Desafio 3: Docker Compose Orquestrando Serviços
 
 ## Sobre o Projeto
-Neste desafio, utilizei o **Docker Compose** para orquestrar uma aplicação completa composta por três serviços interligados. [cite_start]O objetivo foi demonstrar como gerenciar múltiplas dependências e redes internas sem precisar subir cada container manualmente[cite: 46, 47].
+Neste desafio, utilizei o **Docker Compose** para orquestrar uma aplicação completa composta por três serviços interligados. O objetivo foi demonstrar como gerenciar múltiplas dependências e redes internas sem precisar subir cada container manualmente.
 
 ##  Arquitetura da Solução
 
-[cite_start]O sistema foi dividido em três camadas (Microsserviços)[cite: 49]:
+O sistema foi dividido em três camadas (Microsserviços):
 
 1.  **Aplicação Web (`web`)**:
     * **Tecnologia:** Python com Flask.
     * **Função:** É o frontend que o usuário acessa. Ele recebe a requisição, incrementa um contador no Cache e salva um registro de log no Banco de Dados.
-    * [cite_start]**Configuração:** As senhas e endereços dos bancos foram passados via variáveis de ambiente (`environment`) no arquivo `docker-compose.yml`, garantindo segurança e flexibilidade[cite: 50].
+    * **Configuração:** As senhas e endereços dos bancos foram passados via variáveis de ambiente (`environment`) no arquivo `docker-compose.yml`, garantindo segurança e flexibilidade.
 
 2.  **Cache (`redis`)**:
     * **Tecnologia:** Redis Alpine.
@@ -21,8 +21,8 @@ Neste desafio, utilizei o **Docker Compose** para orquestrar uma aplicação com
     * **Função:** Guarda o histórico persistente de acessos.
 
 ### Detalhes Técnicos
-* [cite_start]**Rede Interna:** Criei uma rede chamada `minha-rede` para que os containers conversem entre si usando seus nomes de serviço (`web`, `redis`, `db`)[cite: 52].
-* [cite_start]**Ordem de Inicialização:** Usei a diretiva `depends_on` para garantir que a aplicação web saiba que depende do banco e do cache para rodar[cite: 52].
+* **Rede Interna:** Criei uma rede chamada `minha-rede` para que os containers conversem entre si usando seus nomes de serviço (`web`, `redis`, `db`).
+* **Ordem de Inicialização:** Usei a diretiva `depends_on` para garantir que a aplicação web saiba que depende do banco e do cache para rodar.
 
 ## 📂 Estrutura de Arquivos
 
