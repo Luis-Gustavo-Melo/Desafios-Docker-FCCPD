@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./app
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_HOST=redis
+      - DB_HOST=db
+      - DB_PASS=exemplo123
+      - DB_NAME=meubanco
+    depends_on:
+      - redis
+      - db
+    networks:
+      - minha-rede
+
+  redis:
+    image: "redis:alpine"
+    networks:
+      - minha-rede
+
+
+  db:
+    image: "postgres:alpine"
+    environment:
+      - POSTGRES_PASSWORD=exemplo123
+      - POSTGRES_DB=meubanco
+    networks:
+      - minha-rede
+
+networks:
+  minha-rede:
+    driver: bridge
