@@ -24,7 +24,7 @@ O sistema foi dividido em três camadas (Microsserviços):
 * **Rede Interna:** Criei uma rede chamada `minha-rede` para que os containers conversem entre si usando seus nomes de serviço (`web`, `redis`, `db`).
 * **Ordem de Inicialização:** Usei a diretiva `depends_on` para garantir que a aplicação web saiba que depende do banco e do cache para rodar.
 
-## 📂 Estrutura de Arquivos
+##  Estrutura de Arquivos
 
 ```text
 desafio3/
